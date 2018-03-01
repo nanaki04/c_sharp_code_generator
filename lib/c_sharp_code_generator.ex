@@ -14,8 +14,9 @@ defmodule CSharpCodeGenerator do
   @private_property_template File.read! "templates/private_property.tmpl"
 
   @spec generate(code_parser_state, options) :: :ok
-  def generate(code_parser_state, _options) do
+  def generate(code_parser_state, _options \\ []) do
     BoilerplateGenerator.generate(code_parser_state,
+      extension: ".cs",
       class_template: @class_template,
       enum_template: @enum_template,
       enum_property_template: @enum_property_template,

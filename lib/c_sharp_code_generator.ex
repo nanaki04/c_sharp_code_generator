@@ -10,6 +10,7 @@ defmodule CSharpCodeGenerator do
   @interface_method_template File.read! "templates/interface_method.tmpl"
   @interface_property_template File.read! "templates/interface_property.tmpl"
   @method_template File.read! "templates/method.tmpl"
+  @method_parameter_doc_template File.read! "templates/method.tmpl"
   @public_property_template File.read! "templates/public_property.tmpl"
   @private_property_template File.read! "templates/private_property.tmpl"
 
@@ -24,6 +25,7 @@ defmodule CSharpCodeGenerator do
       interface_method_template: @interface_method_template,
       interface_property_template: @interface_property_template,
       method_template: @method_template,
+      method_parameter_doc_template: @method_parameter_doc_template,
       public_property_template: @public_property_template,
       private_property_template: @private_property_template
     )

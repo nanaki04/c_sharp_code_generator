@@ -8,4 +8,11 @@ defmodule CSharpCodeGeneratorTest do
     assert :ok = result
     assert {:ok, _} = File.read "Dummy/Namespace/DummyClass.cs"
   end
+
+  test "generate cs files for unity" do
+    result = CodeParserState.Example.generate
+    |> CSharpCodeGenerator.generate_for_unity()
+    assert :ok = result
+    assert {:ok, _} = File.read "Dummy/Namespace/DummyClass.cs"
+  end
 end

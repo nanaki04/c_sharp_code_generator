@@ -10,7 +10,7 @@ defmodule CSharpCodeGenerator do
   @interface_method_template File.read! "templates/interface_method.tmpl"
   @interface_property_template File.read! "templates/interface_property.tmpl"
   @method_template File.read! "templates/method.tmpl"
-  @method_parameter_doc_template File.read! "templates/method.tmpl"
+  @method_parameter_doc_template File.read! "templates/method_parameter_doc.tmpl"
   @public_property_template File.read! "templates/public_property.tmpl"
   @private_property_template File.read! "templates/private_property.tmpl"
 
